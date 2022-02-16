@@ -8,7 +8,7 @@
 "..\output\stm32f10x_tim.o"
 "..\output\stm32f10x_usart.o"
 "..\output\stm32f10x_it.o"
-"..\output\main6.o"
+"..\output\main4.o"
 "..\output\delay.o"
 "..\output\led.o"
 "..\output\timer3.o"

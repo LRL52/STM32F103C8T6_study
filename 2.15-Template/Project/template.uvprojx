@@ -453,9 +453,9 @@
               <FilePath>..\User\stm32f10x_it.h</FilePath>
             </File>
             <File>
-              <FileName>main6.c</FileName>
+              <FileName>main4.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\User\main6.c</FilePath>
+              <FilePath>..\User\main4.c</FilePath>
             </File>
           </Files>
         </Group>
