@@ -502,6 +502,16 @@
               <FileType>5</FileType>
               <FilePath>..\SYS\sys.h</FilePath>
             </File>
+            <File>
+              <FileName>timer2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYS\timer2.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer2.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SYS\timer2.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

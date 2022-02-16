@@ -31,4 +31,5 @@
 ..\output\main.o: ..\Libraries\inc\misc.h
 ..\output\main.o: ..\SYS\delay.h
 ..\output\main.o: ..\SYS\timer3.h
+..\output\main.o: ..\SYS\timer2.h
 ..\output\main.o: ..\SYS\sys.h
