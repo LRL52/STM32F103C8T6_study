@@ -38,11 +38,15 @@ compiling main.c...
   void LED_RUN();
 ..\SYS\led.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-..\User\main.c: 5 warnings, 0 errors
+..\SYS\my_usart1.h(6): warning:  #1295-D: Deprecated declaration My_USART1 - give arg types
+  void My_USART1();
+..\User\main.c(21): warning:  #111-D: statement is unreachable
+  	return 0;
+..\User\main.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=1600 RO-data=268 RW-data=8 ZI-data=1024  
+Program Size: Code=1804 RO-data=268 RW-data=44 ZI-data=1028  
 FromELF: creating hex file...
-"..\Output\template.axf" - 0 Error(s), 5 Warning(s).
+"..\Output\template.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 

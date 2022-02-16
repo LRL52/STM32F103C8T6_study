@@ -512,6 +512,16 @@
               <FileType>5</FileType>
               <FilePath>..\SYS\timer2.h</FilePath>
             </File>
+            <File>
+              <FileName>my_usart1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYS\my_usart1.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_usart1.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SYS\my_usart1.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
