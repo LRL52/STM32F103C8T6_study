@@ -7,14 +7,6 @@ int main(){
 	
 	LED_GPIO_Config();
 	delay_init();
-	
-	while(1){
-		//*((unsigned int*)0x422201B4) = 0;
-		PCout(13) = 0;
-		delay_ms(500);
-		//*((unsigned int*)0x422201B4) = 1;
-		PCout(13) = 1;
-		delay_ms(500);
-	}
+	TIM3_Init(9999, 7199);
 	return 0;
 }
