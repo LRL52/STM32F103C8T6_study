@@ -61,7 +61,10 @@ void USART1_SendString(char *s){
 	while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
 }
 
+int tot = 0;
 void USART1_IRQHandler(){
+	++tot;
+	//printf("第 %d 次进入中断服务函数\r\n", ++tot);
 	if(USART_GetITStatus(USART1, USART_IT_RXNE) == RESET) return;
 	uint16_t c = USART_ReceiveData(USART1);
 	USART1_SendChar(c);
