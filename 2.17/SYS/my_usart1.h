@@ -4,6 +4,6 @@
 #include "stm32f10X.h"
 
 void My_USART1(void);
-
+void USART1_SendString(char *s);
 
 #endif

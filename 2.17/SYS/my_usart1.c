@@ -7,6 +7,7 @@
 6.编写中断处理函数
 */
 #include "my_usart1.h"
+#include <string.h>
 
 void My_USART1(void){
 	GPIO_InitTypeDef GPIO_InitStruct;
@@ -37,4 +38,13 @@ void My_USART1(void){
 	
 	//5.使能串口
 	USART_Cmd(USART1, ENABLE);
+}
+
+void USART1_SendString(char *s){
+	int len = strlen(s), i;
+	for(i = 0; i < len; ++i){
+		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+		USART_SendData(USART1, s[i]);
+	}
+	while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
 }
