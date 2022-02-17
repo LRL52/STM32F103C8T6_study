@@ -10,11 +10,10 @@ char text[] = "Hello world!\r\n  ¡ª¡ªsent by LRL52 on Feb 17th, 2022";
 int main(void){
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	LED_GPIO_Config();
-	//delay_init();
 	LED_ON();
 	My_USART1();
 	printf("%s\r\n", text);
-	//USART1_SendString(text);
+//	USART1_SendString(text);
 //	static char s[2] = {0};
 //	while(1){
 //		while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET);

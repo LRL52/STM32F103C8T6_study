@@ -62,11 +62,9 @@ void USART1_SendString(char *s){
 }
 
 void USART1_IRQHandler(){
-	static char s[5] = "init";
 	if(USART_GetITStatus(USART1, USART_IT_RXNE) == RESET) return;
-	s[0] = USART_ReceiveData(USART1);
-	s[1] = 0;
-	USART1_SendString(s);
+	uint16_t c = USART_ReceiveData(USART1);
+	USART1_SendChar(c);
 }
 
 int fputc(int ch, FILE *f){
