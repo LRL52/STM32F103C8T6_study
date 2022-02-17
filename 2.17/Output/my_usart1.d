@@ -30,3 +30,4 @@
 ..\output\my_usart1.o: ..\Libraries\inc\stm32f10x_wwdg.h
 ..\output\my_usart1.o: ..\Libraries\inc\misc.h
 ..\output\my_usart1.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\output\my_usart1.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

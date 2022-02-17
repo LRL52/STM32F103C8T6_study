@@ -1,5 +1,4 @@
 ..\output\main.o: ..\User\main.c
-..\output\main.o: ..\SYS\led.h
 ..\output\main.o: ..\Libraries\CMSIS\stm32f10x.h
 ..\output\main.o: ..\Libraries\CMSIS\core_cm3.h
 ..\output\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -29,7 +28,9 @@
 ..\output\main.o: ..\Libraries\inc\stm32f10x_usart.h
 ..\output\main.o: ..\Libraries\inc\stm32f10x_wwdg.h
 ..\output\main.o: ..\Libraries\inc\misc.h
+..\output\main.o: ..\SYS\led.h
 ..\output\main.o: ..\SYS\sys.h
 ..\output\main.o: ..\SYS\delay.h
 ..\output\main.o: ..\SYS\my_usart1.h
 ..\output\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\output\main.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -8,10 +8,12 @@
 */
 #include "my_usart1.h"
 #include <string.h>
+#include <stdio.h>
 
 void My_USART1(void){
 	GPIO_InitTypeDef GPIO_InitStruct;
-	USART_InitTypeDef USART_InitStruct; 
+	USART_InitTypeDef USART_InitStruct;
+	NVIC_InitTypeDef NVIC_InitStruct;
 	//1.串口时钟、GPIOC时钟使能
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
@@ -36,15 +38,38 @@ void My_USART1(void){
 	USART_InitStruct.USART_WordLength = USART_WordLength_8b;
 	USART_Init(USART1, &USART_InitStruct);
 	
+	//4.开启中断并且初始化NVIC
+	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE); //记着别漏了！！！
+	NVIC_InitStruct.NVIC_IRQChannel = USART1_IRQn;
+	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 2;
+	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 2;
+	NVIC_Init(&NVIC_InitStruct);
+	
 	//5.使能串口
 	USART_Cmd(USART1, ENABLE);
 }
 
+void USART1_SendChar(char c){
+	while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+	USART_SendData(USART1, c);
+}
+
 void USART1_SendString(char *s){
 	int len = strlen(s), i;
-	for(i = 0; i < len; ++i){
-		while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
-		USART_SendData(USART1, s[i]);
-	}
+	for(i = 0; i < len; ++i) USART1_SendChar(s[i]);
 	while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+}
+
+void USART1_IRQHandler(){
+	static char s[5] = "init";
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) == RESET) return;
+	s[0] = USART_ReceiveData(USART1);
+	s[1] = 0;
+	USART1_SendString(s);
+}
+
+int fputc(int ch, FILE *f){
+	USART1_SendChar((char)ch);
+	return ch;
 }
