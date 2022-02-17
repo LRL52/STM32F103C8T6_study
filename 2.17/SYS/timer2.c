@@ -36,7 +36,7 @@ void TIM2_Init(u16 arr,u16 psc){
 	TIM_Cmd(TIM2, ENABLE);
 }
 
-void TIM2_IRQHandler(){
+void TIM2_IRQHandler(void){
 	static int i = 0;
 	if(TIM_GetITStatus(TIM2,TIM_IT_Update) != RESET){
 		switch(i){

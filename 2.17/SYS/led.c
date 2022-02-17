@@ -1,6 +1,6 @@
 #include "led.h"
 
-void LED_GPIO_Config(){
+void LED_GPIO_Config(void){
 	//≈‰÷√ ±÷”
 	GPIO_InitTypeDef GPIO_InitStruct; 
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
@@ -12,11 +12,11 @@ void LED_GPIO_Config(){
 	GPIO_Init(GPIOC, &GPIO_InitStruct);
 }
 
-void LED_ON(){
+void LED_ON(void){
 	GPIO_ResetBits(GPIOC, GPIO_Pin_13);
 }
 
-void LED_OFF(){
+void LED_OFF(void){
 	GPIO_SetBits(GPIOC, GPIO_Pin_13);
 }
 

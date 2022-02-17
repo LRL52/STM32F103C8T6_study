@@ -36,7 +36,7 @@ void TIM3_Init(u16 arr,u16 psc){
 	TIM_Cmd(TIM3, ENABLE);
 }
 
-void TIM3_IRQHandler(){
+void TIM3_IRQHandler(void){
 	static int i = 0;
 	if(TIM_GetITStatus(TIM3,TIM_IT_Update) != RESET){
 		switch(i){

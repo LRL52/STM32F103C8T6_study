@@ -2,7 +2,7 @@
 #include "stm32f10x.h"  //包含需要的头文件
 
 
-void delay_init()
+void delay_init(void)
 {
 	SysTick->CTRL &= ~(1 << 2); //系统时钟八分频
 }

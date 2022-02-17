@@ -3,7 +3,7 @@
 
 #include "stm32f10X.h"
 
-void My_USART1();
+void My_USART1(void);
 
 
 #endif

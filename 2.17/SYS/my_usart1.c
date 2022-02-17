@@ -8,7 +8,7 @@
 */
 #include "my_usart1.h"
 
-void My_USART1(){
+void My_USART1(void){
 	GPIO_InitTypeDef GPIO_InitStruct;
 	USART_InitTypeDef USART_InitStruct; 
 	//1.串口时钟、GPIOC时钟使能
