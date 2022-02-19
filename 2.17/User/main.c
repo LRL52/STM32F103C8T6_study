@@ -15,9 +15,7 @@ int main(void){
 	delay_init();
 	My_USART1();
 	printf("%s\r\n", text);
-	int i;
-	for(i = 0; i < 10; ++i) delay_ms(1000);
-	printf("%d 次进入中断服务函数\r\n", tot);
+	printf("addr:%x\r\n", text);
 //	USART1_SendString(text);
 //	static char s[2] = {0};
 //	while(1){

@@ -1,0 +1,214 @@
+test begin:
+MEMTBLSIZE = 32
+test done
+test start!
+malloc
+    length: 0x000010
+    addr:   0x20000038
+Current list(1):
+    start at 0x20000038 and end at 0x20000048
+malloc
+    length: 0x000080
+    addr:   0x20000058
+Current list(2):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+malloc
+    length: 0x000001
+    addr:   0x200000d8
+Current list(3):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+malloc
+    length: 0x000008
+    addr:   0x200000f8
+Current list(4):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000100
+free
+    addr: 0x200000f8
+Current list(3):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+malloc
+    length: 0x000010
+    addr:   0x200000f8
+Current list(4):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+malloc
+    length: 0x000100
+    addr:   0x20000118
+Current list(5):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+malloc
+    length: 0x000004
+    addr:   0x20000218
+Current list(6):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+malloc
+    length: 0x000040
+    addr:   0x20000238
+Current list(7):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000278
+malloc
+    length: 0x000010
+    addr:   0x20000278
+Current list(8):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000278
+    start at 0x20000278 and end at 0x20000288
+malloc
+    length: 0x000040
+    addr:   0x20000298
+Current list(9):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000278
+    start at 0x20000278 and end at 0x20000288
+    start at 0x20000298 and end at 0x200002d8
+malloc
+    length: 0x000001
+    addr:   0x200002d8
+Current list(10):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000278
+    start at 0x20000278 and end at 0x20000288
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002d8 and end at 0x200002d9
+malloc
+    length: 0x000004
+    addr:   0x200002f8
+Current list(11):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000278
+    start at 0x20000278 and end at 0x20000288
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002d8 and end at 0x200002d9
+    start at 0x200002f8 and end at 0x200002fc
+free
+    addr: 0x20000278
+Current list(10):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000278
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002d8 and end at 0x200002d9
+    start at 0x200002f8 and end at 0x200002fc
+free
+    addr: 0x20000238
+Current list(9):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002d8 and end at 0x200002d9
+    start at 0x200002f8 and end at 0x200002fc
+malloc
+    length: 0x000010
+    addr:   0x20000238
+Current list(10):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000248
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002d8 and end at 0x200002d9
+    start at 0x200002f8 and end at 0x200002fc
+free
+    addr: 0x200002d8
+Current list(9):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000238 and end at 0x20000248
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002f8 and end at 0x200002fc
+free
+    addr: 0x20000238
+Current list(8):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002f8 and end at 0x200002fc
+malloc
+    length: 0x000100
+    addr:   0x20000318
+Current list(9):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000218 and end at 0x2000021c
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002f8 and end at 0x200002fc
+    start at 0x20000318 and end at 0x20000418
+free
+    addr: 0x20000218
+Current list(8):
+    start at 0x20000038 and end at 0x20000048
+    start at 0x20000058 and end at 0x200000d8
+    start at 0x200000d8 and end at 0x200000d9
+    start at 0x200000f8 and end at 0x20000108
+    start at 0x20000118 and end at 0x20000218
+    start at 0x20000298 and end at 0x200002d8
+    start at 0x200002f8 and end at 0x200002fc
+    start at 0x20000318 and end at 0x20000418
